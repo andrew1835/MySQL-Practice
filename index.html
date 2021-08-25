@@ -14,11 +14,31 @@
     <!-- Search bar (searches the database) -->
     <!-- Form to add a movie -->
     <!-- List of movies -->
-    <h1 id="topH1">Some favorite movies</h1>
+    <h1 id="topH1">Some of our Favorite Movies</h1>
+    <hr>
 
-    <div id="searchForm">
+    <div id="searchDiv">
+        <h2>Search for a movie from our list</h2>
+        <form action="GET" id="searchForm">
+            <input type="text" placeholder="Search our list of movies" id="searchInput">
+            <button id="searchButton">Search</button>
+        </form>
+    </div>
 
+    <div id="addDiv">
+        <h2>Add a movie</h2>
+        <form action="POST" id="addForm">
+            <input type="text" placeholder="Name of movie" id="addInput">
+            <button id="addButton">Add</button>
+        </form>
+    </div>
 
+    <div id="databaseList">
+        <h2>List of Movies added so far:</h2>
+        <ol id="olDB">
+
+        </ol>
+        <!-- will do javascript to map over the database items and append them to this div -->
     </div>
 
 
@@ -26,6 +46,8 @@
 
 
     <script src="script.js"></script>
+    <script src="routes.js"></script>
+    <script src="moviesCRUD.js"></script>
 </body>
 
 </html>
