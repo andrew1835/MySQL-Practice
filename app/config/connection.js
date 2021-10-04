@@ -1,4 +1,5 @@
 var mysql = require("mysql");
+var path = require("path")
 
 var connection = mysql.createConnection({
     host: "localhost",
@@ -13,3 +14,14 @@ var connection = mysql.createConnection({
     password: "password",
     database: "moviesDB"
 });
+
+connection.connect((err) => {
+    if (err) {
+        console.error("Cannot connect to database")
+    }
+    console.log(`connected as id ${connection.threadId}`)
+})
+
+module.exports = connection
+
+// this file is good to go

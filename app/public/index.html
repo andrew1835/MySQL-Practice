@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MySQL Practice</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
 <body>
@@ -19,18 +20,14 @@
 
     <div id="searchDiv">
         <h2>Search for a movie from our list</h2>
-        <form action="GET" id="searchForm">
-            <input type="text" placeholder="Search our list of movies" id="searchInput">
-            <button id="searchButton">Search</button>
-        </form>
+        <input type="text" placeholder="Search our list of movies" id="searchInput">
+        <a href="searched.html"><button id="searchButton">Search</button></a>
     </div>
 
     <div id="addDiv">
         <h2>Add a movie</h2>
-        <form action="POST" id="addForm">
-            <input type="text" placeholder="Name of movie" id="addInput">
-            <button id="addButton">Add</button>
-        </form>
+        <input type="text" placeholder="Name of movie" id="addInput">
+        <button id="addButton">Add</button>
     </div>
 
     <div id="databaseList">
@@ -41,14 +38,21 @@
         <!-- will do javascript to map over the database items and append them to this div -->
     </div>
 
+    <div id="searchedMovie">
+        <h2>Search Result:</h2>
+        <h4 id='result'></h4>
+    </div>
 
 
 
 
-    <script src="../script.js"></script>
-    <script src="../routes/routes.js"></script>
-    <script src="../moviesCRUD.js"></script>
-    <script src="../server.js"></script>
+
+
+    <script src="js/app.js"></script>
+
+
 </body>
 
 </html>
+
+<!-- good to go -->
